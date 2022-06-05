@@ -7,43 +7,57 @@
     <title>Document</title>
 
     <style>
-        * {
+        *{
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-           }
+        }
 
         .container {
-            width: 75px;
+            width: 75%;
             margin: 0 auto;
             display: flex;
-            flex-direction: row;
-            height: 600px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            min-height: 600px;
             background: black;
         }   
 
         .box {
             text-align: center;
             background: #f2f2f2;
+            width: 200px;
+            height: 200px;
             border: 1px solid black;
+            margin: 10px;
         }   
+
+        .box-1 {
+            /* order: 3; */
+            background: purple;
+            /* flex-grow: 1; */
+        }
+        .box-2 {
+            /* order: 1;
+            align-self: center; */
+            flex-grow: 1;
+            background: red;
+        }
+        .box-3{
+            /* order: 2; */
+            background: yellow;
+            /* flex-grow: 3; */
+            /* align-self: flex-end; */
+        }
     </style>
 </head>
 <body>
     
     <div class="container">
-        <div class="box">
-            <h1>Article 1</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, voluptatem?</p>
-        </div>
-        <div class="box">
-            <h1>Article 2</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, voluptatem?</p>
-        </div>
-        <div class="box">
-            <h1>Article 3</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, voluptatem?</p>
-        </div>
+
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
 
     </div>
 
